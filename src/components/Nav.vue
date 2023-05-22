@@ -1,26 +1,28 @@
 <template>
-    <nav class="navbar navbar-expand-sm bg-info" id="navbar-head">
-        <div class="nav-section">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney"></i></a>
+    <div id="LogoBox" class="container d-flex justify-content-between align-items-center">
+        <a href="/" id="Logo" title="PKF Hadiwinata" ><img src="../assets/images/logo.png" alt=""></a>
+        
+        <p class="fs-3">PKF MYANMAR</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney" :class="{'d-none': isSticky, 'd-block': !isSticky}"></i> <img src="../assets/images/logo.png" :class="{'d-none': !isSticky, 'd-bock' : isSticky}" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">ABOUT</a>
                     </li>
 
 
                     <li class="nav-item service-menu">
-                        <a class="nav-link nav2-info-container" href=""><span>Products & Services</span></a>
+                        <a class="nav-link nav2-info-container" href=""><span>SERVICES</span></a>
                         <div class="dropdown">
                             <div class="fusion-megamenu-widgets-container second-level-widget">
                                 <div id="media_image-3" class="widget widget_media_image">
-                                    <img src="../assets/images/logo.jpg"
+                                    <img src="../assets/images/logo.png"
                                         class="image wp-image-22968  attachment-full size-full" alt="">
                                 </div>
                             </div>
@@ -42,44 +44,51 @@
                             </ul>
                         </div>
                     </li>
-                    
 
-
-
-
-
-
-
-
-
-
-
-                    
                     
                 </ul>
             </div>
         </div>
     </nav>
+    <br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br>
 </template>
 
 <script>
+import { onMounted, ref } from 'vue'
     export default {
-        
+        setup() {
+            let isSticky = ref(false);
+
+            let handleScroll = () => {
+                isSticky.value = window.pageYOffset;
+            }
+
+            onMounted(() => {
+                window.addEventListener('scroll', handleScroll);
+            })
+
+            return {isSticky}
+        }
     }
 </script>
 
 <style scoped>
-    #navbar-head {
-        padding: .5rem 9%;
+
+    .container {
+        padding: 0 15px;
     }
-    .nav-section {
-        display: flex;
-        flex-wrap: inherit;
-        align-items: center;
-        justify-content: space-between;
+    .navbar {
+        position: sticky;
+        top: 0;
     }
     img {
-        width: 50px;
+        width: 100px;
     }
 
     .dropdown {
