@@ -1,12 +1,23 @@
 <template>
-    <div id="LogoBox" class="container d-flex justify-content-between align-items-center">
+    <header>
+       <div class="container">
+        <div class="social-media">
+            <div class="twitter"><i class="fa-brands fa-square-twitter"></i></div>
+            <div class="linkedin"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="fb"><i class="fa-brands fa-square-facebook"></i></div>
+            <div class="ig"><i class="fa-brands fa-square-instagram"></i></div>
+        </div>
+       </div>
+    </header>
+
+    <div id="LogoBox" class="container d-flex justify-content-between align-items-center px-3">
         <a href="/" id="Logo" title="PKF Hadiwinata" ><img src="../assets/images/logo.png" alt=""></a>
         
-        <p class="fs-3">PKF MYANMAR</p>
+        <p class="fs-3 text-secondary fw-bold">PKF MYANMAR</p>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light main-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney" :class="{'d-none': isSticky, 'd-block': !isSticky}"></i> <img src="../assets/images/logo.png" :class="{'d-none': !isSticky, 'd-bock' : isSticky}" alt=""></a>
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney" :class="{'d-none': isSticky > 105, 'd-block': !isSticky > 105}"></i> <img src="../assets/images/logo.png" :class="{'d-none': isSticky < 115, 'd-bock' : isSticky >105}" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,30 +29,57 @@
 
 
                     <li class="nav-item service-menu">
-                        <a class="nav-link nav2-info-container" href=""><span>SERVICES</span></a>
+                        <a class="nav-link nav2-info-container" href="">SERVICES</a>
                         <div class="dropdown">
-                            <div class="fusion-megamenu-widgets-container second-level-widget">
-                                <div id="media_image-3" class="widget widget_media_image">
-                                    <img src="../assets/images/logo.png"
-                                        class="image wp-image-22968  attachment-full size-full" alt="">
-                                </div>
+                            <div class="container pt-3">
+                                    <div class="row w-100 ">
+                                        <div class="col-md-3 col-sm-12 mb-4">
+                                            <div class="row">
+                                                <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0 ">
+                                                    <img src="../assets/images/assurance.png" alt=" Audit &amp; Assurance">    </div>
+                                                <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
+                                                    <a href="/services/audit-assurance/"><h5> Audit &amp; Assurance</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>             
+                                        <div class="col-md-3 col-sm-12 mb-4">
+                                            <div class="row">
+                                                <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
+                                                    <img src="../assets/images/advisory.png" alt=" Advisory">    </div>
+                                                <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
+                                                    <a href="/services/advisory/"><h5> Advisory</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>             
+                                        <div class="col-md-3 col-sm-12 mb-4">
+                                            <div class="row">
+                                                <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
+                                                    <img src="../assets/images/tax-legal.png" alt="Tax">    </div>
+                                                <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
+                                                    <a href="/services/tax/"><h5>Tax</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>             
+                                        <div class="col-md-3 col-sm-12 mb-4">
+                                            <div class="row">
+                                                <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
+                                                    <img src="../assets/images/business-solutions.png" alt="Business Solutions">    </div>
+                                                <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
+                                                    <a href="/services/business-solutions/"><h5>Business Solutions</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>             
+                                        <div class="col-md-3 col-sm-12 mb-4 mt-3">
+                                            <div class="row">
+                                                <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
+                                                        <img src="../assets/images/risk-advisory.png" alt="Technology &amp; Risk Services">    </div>
+                                                <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
+                                                    <a href="/services/technology-risk-services/"><h5>Technology &amp; Risk Services</h5></a>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
                             </div>
-                            <ul>
-                                <li class="dropdown-link"><a href="#">Distribution Transformer<i
-                                            class="uil uil-angle-right"></i></a></li>
-                                <li class="dropdown-link"><a href="#">Power Transformer<i
-                                            class="uil uil-angle-right"></i></a></li>
-                                <li class="dropdown-link"><a href="#">Panel<i
-                                            class="uil uil-angle-right"></i></a></li>
-                                <li class="dropdown-link"><a href="#">Package Type Transformer<i
-                                            class="uil uil-angle-right"></i></a></li>
-                            </ul>
-                            <ul>
-                                <li class="dropdown-link"><a href="#">Installation Services<i
-                                            class="uil uil-angle-right"></i></a></li>
-                                <li class="dropdown-link"><a href="#">After Sale Services<i
-                                            class="uil uil-angle-right"></i></a></li>
-                            </ul>
                         </div>
                     </li>
 
@@ -50,13 +88,7 @@
             </div>
         </div>
     </nav>
-    <br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br>
+   
 </template>
 
 <script>
@@ -67,6 +99,7 @@ import { onMounted, ref } from 'vue'
 
             let handleScroll = () => {
                 isSticky.value = window.pageYOffset;
+                console.log(isSticky.value)
             }
 
             onMounted(() => {
@@ -83,12 +116,66 @@ import { onMounted, ref } from 'vue'
     .container {
         padding: 0 15px;
     }
-    .navbar {
+    .main-navbar {
         position: sticky;
         top: 0;
+        z-index: 999;
+        background: #fff;
     }
     img {
-        width: 100px;
+        width: 80px;
+    }
+
+    /* ---top header---  */
+    header {
+        background: #555658;
+        padding: 5px 0;
+    }
+    .social-media {
+        display: flex;
+        gap: .5rem;
+    }
+    .social-media i {
+        font-size: 25px;
+        color: #fff;
+    }
+
+    /* ---top header end---  */
+
+
+    /* ---logo box navbar--- */
+    #LogoBox {
+        padding: 20px 10px;
+    }
+
+    /* --- logo box navbar end---  */
+
+
+    /* ---main navbar---  */
+    .row img {
+        width: 80%;
+        height: auto;
+    }
+
+    .navbar-brand i {
+        font-size: 30px;
+    }
+    .row .col-lg-8 a h5{
+        font-size: 16px;
+        text-align: left !important;
+    }
+
+    .row .col-lg-8 a {
+        text-decoration: none;
+    }
+
+    .nav-link {
+        color:  #0045b6 !important;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .navbar-brand i {
+        color: #0045b6;
     }
 
     .dropdown {
@@ -100,86 +187,17 @@ import { onMounted, ref } from 'vue'
         opacity: 0;
         visibility: hidden;
         transition: 0.5s;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: #e7e8ea;
         display: flex;
     }
-    .dropdown ul {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 10px 50px;
-    }
-
-    .dropdown ul li {
-        margin: 10px 30px;
-        list-style: none;
-    }
-    .dropdown-link>a {
-        display: flex;
-        text-decoration: none;
-        color: #fff;
-        padding: .5rem 0;
-        font-size: 1rem;
-        align-items: center;
-        vertical-align: middle;
-        transition: .3s;
-        cursor: pointer !;
-    }
-    .dropdown-link:hover>a {
-        text-decoration: underline;
-    }
-    .dropdown-link:first-child:hover~.arrow {
-        background-color: #3498db;
-    }
-    .dropdown-link {
-        position: relative;
-    }
-    .dropdown-item {
-        margin: 0 auto !important;
-    }
-    .fusion-megamenu-widgets-container {
-        width: 25%;
-        display: block;
-        padding: 0 34px;
-        margin: auto 10px auto 50px;
-        line-height: 1.8;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        letter-spacing: 0;
-        font-style: normal;
-    }
-    .widget_media_image {
-        border-style: solid;
-        border-color: transparent;
-        border-width: 0px;
-    }
-    .wp-image-22968 {
-        max-width: 100%;
-        height: auto;
-        border-style: none;
-        vertical-align: top;
-        overflow-clip-margin: content-box;
-        overflow: clip;
-        width: 249px;
-        aspect-ratio: auto 249 / 83;
-        height: 120px;
-    }
+    
     .service-menu:hover>.dropdown {
         transform: translate(0, 0);
         pointer-events: auto;
         opacity: 1;
         visibility: visible;
     }
-    .dropdown-link .uil {
-        font-size: 1.5rem;
-        font-weight: 600;
-        padding-top: auto;
-        padding-bottom: auto;
-        margin: auto 0 auto 10px;
-        color: #c02;
-        justify-content: inherit;
-        vertical-align: middle !important;
-    }
+
+    /* --- main navbar end---  */
    
 </style>

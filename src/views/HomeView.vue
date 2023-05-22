@@ -1,13 +1,19 @@
 <template>
-  <div class="home">
-  </div>
+  <Carousel></Carousel>
+  <Welcome></Welcome>
 </template>
 
 <script>
-// @ is an alias to /src
-
+  import Welcome from '../components/Welcome'
+import Carousel from '../components/Carousel'
 export default {
-  name: 'HomeView',
- 
-}
+  components: {
+    Welcome, Carousel },
+    
+  }
 </script>
+
+<style scoped>
+
+</style>
+
