@@ -36,7 +36,7 @@
             <a href="">
                 <img src="../assets/images/risk-advisory1.png" alt="">
                 <p>Technology & Risk Services</p>
-            </a>
+            </a> 
         </div>
     </div>
 </template>
