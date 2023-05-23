@@ -1,5 +1,5 @@
 <template>
-    <div class="welcome container mt-4">
+    <div class="welcome container my-4">
         <h3 class="mb-4">WELCOME TO PKF MYANMAR</h3>
         <p class="fw-bold">
             PKF Hadiwinata is a top 10 accounting & professional services firm in Indonesia, headquartered in the heart of the financial district of Jakarta, and is a member of PKF International’s global family of legally independent firms.
@@ -53,7 +53,7 @@
     }
     .welcome p {
         text-align: justify;
-        font-size: 16px;
+        font-size: 13px;
     }
     .about-us {
         display: inline-flex;
@@ -85,5 +85,6 @@
     .category-link p {
         margin-top: 15px;
         color: #978173;
+        font-size: 13px;
     }
 </style>

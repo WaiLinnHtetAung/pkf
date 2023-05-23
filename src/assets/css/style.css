@@ -7,3 +7,22 @@
     list-style: none;
     color: #000;
 }
+
+.show-link, .show-link a {
+    font-size: 12px;
+    color: #184183;
+}
+.show-link a {
+    border-bottom: 1px solid #0045b6;
+}
+.about-content p {
+    font-size: 13px;
+}
+.contact-btn {
+    background-color: #6ebf08;
+    border: none;
+    font-size: 12px;
+    padding: 2px 9px;
+    color: #fff;
+    border-radius: 5px;
+}

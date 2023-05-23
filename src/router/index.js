@@ -7,6 +7,26 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: () => import('../views/AboutUs.vue')
+  },
+  {
+    path: '/services/:service',
+    name: 'Services',
+    component: () => import('../views/Services.vue'),
+    props: true
+  },
+  {
+    path: '/news-events',
+    name: 'NewsEvents',
+    component: () => import('../views/NewsEvents.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/404Page.vue')
+  }
  
 ]
 

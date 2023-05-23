@@ -17,19 +17,20 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light main-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney" :class="{'d-none': isSticky > 105, 'd-block': !isSticky > 105}"></i> <img src="../assets/images/logo.png" :class="{'d-none': isSticky < 115, 'd-bock' : isSticky >105}" alt=""></a>
+            <router-link class="navbar-brand" to="/">
+                <i class="fa-solid fa-house-chimney" :class="{'d-none': isSticky > 105, 'd-block': !isSticky > 105}"></i> <img src="../assets/images/logo.png" :class="{'d-none': isSticky < 115, 'd-bock' : isSticky >105}" alt="">
+            </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                    <li class="nav-item" >
+                        <router-link to="/about-us" class="nav-link" :class="{'active-menu': currentRoute == '/about-us'}">ABOUT</router-link>
                     </li>
 
-
                     <li class="nav-item service-menu">
-                        <a class="nav-link nav2-info-container" href="">SERVICES</a>
+                        <router-link to="/services/our-services" class="nav-link nav2-info-container" :class="{'active-menu': currentRoute.substring(0,8) == '/service'}">SERVICES <i class="ms-2 fa-solid fa-caret-down text-primary" :class="{'text-white': currentRoute.substring(0,8) == '/service'}"></i></router-link>
                         <div class="dropdown">
                             <div class="container pt-3">
                                     <div class="row w-100 ">
@@ -38,7 +39,7 @@
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0 ">
                                                     <img src="../assets/images/assurance.png" alt=" Audit &amp; Assurance">    </div>
                                                 <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
-                                                    <a href="/services/audit-assurance/"><h5> Audit &amp; Assurance</h5></a>
+                                                    <router-link to="/services/assurance"><h5 :class="{'active-sub-menu': currentRoute == '/services/assurance'}"> Audit &amp; Assurance</h5></router-link>
                                                 </div>
                                             </div>
                                         </div>             
@@ -47,7 +48,7 @@
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/advisory.png" alt=" Advisory">    </div>
                                                 <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
-                                                    <a href="/services/advisory/"><h5> Advisory</h5></a>
+                                                    <a href="/services/advisory"><h5> Advisory</h5></a>
                                                 </div>
                                             </div>
                                         </div>             
@@ -56,7 +57,7 @@
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/tax-legal.png" alt="Tax">    </div>
                                                 <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
-                                                    <a href="/services/tax/"><h5>Tax</h5></a>
+                                                    <a href="/services/tax"><h5>Tax</h5></a>
                                                 </div>
                                             </div>
                                         </div>             
@@ -65,7 +66,7 @@
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/business-solutions.png" alt="Business Solutions">    </div>
                                                 <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
-                                                    <a href="/services/business-solutions/"><h5>Business Solutions</h5></a>
+                                                    <a href="/services/business-solutions"><h5>Business Solutions</h5></a>
                                                 </div>
                                             </div>
                                         </div>             
@@ -74,7 +75,7 @@
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                         <img src="../assets/images/risk-advisory.png" alt="Technology &amp; Risk Services">    </div>
                                                 <div class="col-sm-12 col-md-10 col-lg-8 pl-2 d-flex align-items-center">
-                                                    <a href="/services/technology-risk-services/"><h5>Technology &amp; Risk Services</h5></a>
+                                                    <a href="/services/technological&risk-services"><h5>Technology &amp; Risk Services</h5></a>
                                                 </div>
                                             </div>
                                         </div> 
@@ -83,6 +84,9 @@
                         </div>
                     </li>
 
+                    <li class="nav-item" >
+                        <router-link to="/news-events" class="nav-link" :class="{'active-menu': currentRoute == '/news-events'}">NEWS & EVENTS</router-link>
+                    </li>
                     
                 </ul>
             </div>
@@ -94,17 +98,20 @@
 <script>
 import { onMounted, ref } from 'vue'
     export default {
+        props:['currentRoute'],
         setup() {
             let isSticky = ref(false);
+            let isService = ref(false);
 
             let handleScroll = () => {
                 isSticky.value = window.pageYOffset;
-                console.log(isSticky.value)
             }
+
 
             onMounted(() => {
                 window.addEventListener('scroll', handleScroll);
             })
+
 
             return {isSticky}
         }
@@ -129,7 +136,6 @@ import { onMounted, ref } from 'vue'
     /* ---top header---  */
     header {
         background: #555658;
-        padding: 5px 0;
     }
     .social-media {
         display: flex;
@@ -144,9 +150,9 @@ import { onMounted, ref } from 'vue'
 
 
     /* ---logo box navbar--- */
-    #LogoBox {
-        padding: 20px 10px;
-    }
+    /* #LogoBox {
+        padding: 10px;
+    } */
 
     /* --- logo box navbar end---  */
 
@@ -158,7 +164,7 @@ import { onMounted, ref } from 'vue'
     }
 
     .navbar-brand i {
-        font-size: 30px;
+        font-size: 22px;
     }
     .row .col-lg-8 a h5{
         font-size: 16px;
@@ -169,9 +175,13 @@ import { onMounted, ref } from 'vue'
         text-decoration: none;
     }
 
+    .nav-item>a {
+        margin-left: 10px;
+    }
+
     .nav-link {
         color:  #0045b6 !important;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
     }
     .navbar-brand i {
@@ -196,6 +206,23 @@ import { onMounted, ref } from 'vue'
         pointer-events: auto;
         opacity: 1;
         visibility: visible;
+    }
+    .service-menu .dropdown img {
+        width: 50px !important;
+    }
+
+    .dropdown h5 {
+        font-size: 14px !important;
+    }
+
+    .active-menu {
+        background: #0045b6;
+        color: #fff !important;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .active-sub-menu {
+        color: #6ebf08;
     }
 
     /* --- main navbar end---  */
