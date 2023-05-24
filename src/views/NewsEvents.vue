@@ -76,8 +76,16 @@
 </template>
 
 <script>
+import { onMounted, onUpdated } from 'vue'
     export default {
-        
+        setup() {
+            onUpdated(() => {
+            window.scrollTo(0,0);
+            })
+            onMounted(() => {
+                window.scrollTo(0,0)
+            })
+        }
     }
 </script>
 

@@ -87,7 +87,12 @@
                     <li class="nav-item" >
                         <router-link to="/news-events" class="nav-link" :class="{'active-menu': currentRoute == '/news-events'}">NEWS & EVENTS</router-link>
                     </li>
-                    
+                    <li class="nav-item" >
+                        <router-link to="/careers/careers" class="nav-link" :class="{'active-menu': currentRoute.substring(0,8) == '/careers'}">CAREERS</router-link>
+                    </li>
+                    <li class="nav-item" >
+                        <router-link to="/contact-us" class="nav-link" :class="{'active-menu': currentRoute == '/contact-us'}">CONTACT US</router-link>
+                    </li>
                 </ul>
             </div>
         </div>

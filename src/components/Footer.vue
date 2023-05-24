@@ -60,13 +60,51 @@
         </div>
     </div>
     <footer>
-        <p>PKF Myanmar member of PKF International</p>
-        <p>
-            PKF Myanmar is a member firm of the PKF International Limited family of legally independent firms and does not accept any responsibility or liability for the actions or inactions of any individual member or correspondent firm or firms.
-        </p>
-        <p>
-            "PKF" and the PKF logo are registered trademarks used by PKF International and member firms of the PKF International Network. They may not be used by anyone other than a duly licenced member firm of the Network.
-        </p>
+        <div class="row">
+            <div class="col-lg-4 ">
+                <img src="../assets/images/logo.png" alt="">
+                <h2>PKF MYANMAR</h2>
+                <div class="social">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(+959) 923234334</span>
+                </div>
+                <div class="social">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>example@gmail.com</span>
+                </div>
+                <div class="social">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>
+                        #11C, Stadium View Condo
+                    Corner of Bo Min Yaung Street and Mandalay Street, Mingalar Taung Nyunt Township
+                    Yangon
+                    Myanmar
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-8 footer-content">
+                <p class="pkf-info">
+                    <i class="fa-solid fa-circle-right"></i>
+                    <span>PKF Myanmar member of PKF International</span>
+                </p>
+                <p class="pkf-info">
+                    <i class="fa-solid fa-circle-right"></i>
+                    <span>PKF Myanmar is a member firm of the PKF International Limited family of legally independent firms and does not accept any responsibility or liability for the actions or inactions of any individual member or correspondent firm or firms.</span>
+                </p>
+                <p class="pkf-info">
+                    <i class="fa-solid fa-circle-right"></i>
+                    <span>PKF Myanmar is a member firm of the PKF International Limited family of legally independent firms and does not accept any responsibility or liability for the actions or inactions of any individual member or correspondent firm or firms.</span>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="copy-right">
+            <div>
+                <span>&copy;</span>2021 PKF MYANMAR
+            </div>
+            <div>Privacy Policy</div>
+        </div>
+        
     </footer>
 </template>
 
@@ -113,10 +151,54 @@
     .pkf-link {
         width: 150px;
     }
+    footer img {
+        width: 30%;
+    }
     footer {
         padding: 30px 9%;
     }
-    footer p {
-        font-size: 13px;
+    footer h2 {
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 20px;
+        color: #6ebf08;
     }
+    footer .social {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 15px;
+    }
+    footer .social span {
+        font-size: 13px;
+        color: rgb(56, 51, 51);
+    }
+    footer .social i {
+        font-size: 15px;
+        color: #003594;
+    }
+    footer .pkf-info {
+        font-size: 13px;
+        display: flex;
+        gap: .7rem;
+    }
+    footer .pkf-info i {
+        padding-top: 5px;
+        color: #003594;
+    }
+    footer .footer-content {
+        padding: 90px 20px 10px;
+    }
+    .copy-right {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3%;
+    }
+    .copy-right div {
+        font-size: 10px;
+    }
+    .copy-right span {
+        font-size: 13px;
+        margin-right: 3px;
+    }
+
 </style>

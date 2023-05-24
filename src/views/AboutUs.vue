@@ -31,14 +31,20 @@
 import Two from '../components/Two'
 import One from '../components/One'
 import AboutMM from '../components/AboutMM'
-import { ref } from 'vue'
+import { onMounted, onUpdated, ref } from 'vue'
 export default {
         components: {
     Two,
     One, AboutMM },
         setup() {
-          
             let category = ref('about-us');
+
+            onUpdated(() => {
+                window.scrollTo(0,0)
+            })
+            onMounted(() => {
+                window.scrollTo(0,0)
+            })
 
             return {category}
         }

@@ -24,6 +24,17 @@ const routes = [
     component: () => import('../views/NewsEvents.vue')
   },
   {
+    path: '/careers/:career',
+    name: 'Carrers',
+    component: () => import('../views/Careers.vue'),
+    props: true,
+  },
+  {
+    path: '/contact-us',
+    name: 'ContactUs',
+    component: () => import('../views/ContactUs.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     component: () => import('../views/404Page.vue')
   }
