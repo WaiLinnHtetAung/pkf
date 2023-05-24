@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row mt-5 form">
-            <div class="col-lg-6 ">
+            <div class="col-lg-6">
                 <form action="">
                     <div class="form-group mb-2">
                         <label for="">Full Name <span>*</span></label>
@@ -57,7 +57,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center map ">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21805.962517665175!2d96.14998484085122!3d16.814390059575214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ecbe9bf93d69%3A0xc3f3f04845cf0bd!2sChatrium%20Hotel%20Royal%20Lake%20Yangon!5e0!3m2!1sen!2smm!4v1684902135208!5m2!1sen!2smm" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -132,5 +132,63 @@
     }
     .form {
         padding: 30px 17%;
+    }
+
+    @media (max-width:990px) {
+        .contact-header h2 {
+            top: 32%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            padding: 20px 30px;
+        }
+        .form {
+            margin: 0 auto !important;
+        }
+
+        .form form {
+            margin: 0 auto 30px !important;
+        }
+    }
+
+    @media (max-width:450px) {
+        .contact-header img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(.6);
+            position: relative;
+        }
+        .contact-content {
+            padding: 20px 10%;
+        }
+        .contact-header h2 {
+            top: 27%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            padding: 15px 20px;
+        }
+        .form {
+            margin: 0 auto !important;
+            padding: 10px 9%;
+            width: auto !important;
+        }
+
+        .form form {
+            margin: 0 auto 30px !important;
+            width: 300px;
+        }
+        .contact-info h3 {
+            color: cornflowerblue;
+            font-size: 20px;
+        }
+        .contact-info p {
+            font-size: 12px;
+        }
+        .map iframe{
+            width: 100% !important;
+        }
     }
 </style>

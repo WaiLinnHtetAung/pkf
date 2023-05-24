@@ -1,8 +1,10 @@
 <template>
-  <Carousel></Carousel>
-  <Welcome></Welcome>
-  <Event></Event>
-  <HomeNews></HomeNews>
+  <div class="homepage">
+    <Carousel></Carousel>
+    <Welcome></Welcome>
+    <Event></Event>
+    <HomeNews></HomeNews>
+  </div>
 </template>
 
 <script>
@@ -25,6 +27,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .homepage {
+    overflow-x: hidden;
+  }
 </style>
 

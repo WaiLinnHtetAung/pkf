@@ -13,7 +13,7 @@
     <div id="LogoBox" class="container d-flex justify-content-between align-items-center px-3 logo-box">
         <a href="/" id="Logo" title="PKF Hadiwinata" ><img src="../assets/images/logo.png" alt=""></a>
         
-        <p class="fs-3 text-secondary fw-bold">PKF MYANMAR</p>
+        <p class="fs-3 text-secondary fw-bold pt-2">PKF MYANMAR</p>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light main-navbar">
         <div class="container">
@@ -159,9 +159,9 @@ import { onMounted, ref } from 'vue'
 
 
     /* ---logo box navbar--- */
-    /* #LogoBox {
-        padding: 10px;
-    } */
+    #LogoBox {
+        padding-top: 10px;
+    }
 
     /* --- logo box navbar end---  */
 
@@ -251,6 +251,18 @@ import { onMounted, ref } from 'vue'
             transition: 0.5s;
             background-color: #e7e8ea;
             display: flex;
+            margin-bottom: 10px;
+            padding: 0 0 10px;
+        }
+        .col-md-12.col-lg-3.col-sm-12 {
+            margin: 10px 0 0 !important;
+        }
+        .navbar-toggler-icon {
+            width: 1rem;
+            height: 1rem;
+        }
+        .navbar-toggler {
+            padding: 5px 10px;
         }
     }
    

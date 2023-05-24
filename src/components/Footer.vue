@@ -61,25 +61,29 @@
     </div>
     <footer>
         <div class="row">
-            <div class="col-lg-4 ">
-                <img src="../assets/images/logo.png" alt="">
-                <h2>PKF MYANMAR</h2>
-                <div class="social">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>(+959) 923234334</span>
+            <div class="col-lg-4 col-md-12  footer-contact-info">
+                <div class="col-lg-12 col-md-4">
+                    <img src="../assets/images/logo.png" alt="">
+                    <h2>PKF MYANMAR</h2>
                 </div>
-                <div class="social">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>example@gmail.com</span>
-                </div>
-                <div class="social">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>
-                        #11C, Stadium View Condo
-                    Corner of Bo Min Yaung Street and Mandalay Street, Mingalar Taung Nyunt Township
-                    Yangon
-                    Myanmar
-                    </span>
+                <div class="col-lg-12 col-md-6 ">
+                    <div class="social">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>(+959) 923234334</span>
+                    </div>
+                    <div class="social">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>example@gmail.com</span>
+                    </div>
+                    <div class="social">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>
+                            #11C, Stadium View Condo
+                        Corner of Bo Min Yaung Street and Mandalay Street, Mingalar Taung Nyunt Township
+                        Yangon
+                        Myanmar
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-8 footer-content">
@@ -199,6 +203,30 @@
     .copy-right span {
         font-size: 13px;
         margin-right: 3px;
+    }
+
+    @media (max-width:990px) {
+        footer .footer-contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer img {
+            width: 50%;
+        }
+        footer .footer-content {
+            padding: 40px 20px 10px;
+        }
+    }
+
+    @media (max-width:450px) {
+        footer .footer-contact-info {
+            display: block;
+            justify-content: space-between;
+        }
+        footer img {
+            width: 30%;
+        }
     }
 
 </style>

@@ -15,5 +15,13 @@
 </script>
 
 <style scoped>
-    
+     @media (max-width:450px) {
+        .about-content h3 {
+            font-size: 20px;
+        }
+        .about-content p {
+            font-size: 12px;
+            color: rgb(79, 80, 81);
+        }
+    }
 </style>

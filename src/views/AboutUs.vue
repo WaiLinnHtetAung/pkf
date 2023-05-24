@@ -3,8 +3,8 @@
         <img src="../assets/images/indo-carousel01.jpg" alt="">
         <h2>ABOUT PKF MYANMAR</h2>
 
-        <div class="row mt-5">
-            <div class="col-lg-2 col-md-4 about-category">
+        <div class="row mt-5 about-body">
+            <div class="col-lg-3 col-md-3 about-category">
                 <div class="side-link" :class="{'active-link' : category == 'one'}" @click="category = 'one'">
                     <a :class="{'text-white' : category == 'one'}">One</a>
                 </div>
@@ -12,7 +12,7 @@
                     <a :class="{'text-white' : category == 'two'}">Two</a>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-8 ps-3">
+            <div class="col-lg-9 col-md-9 ps-3">
                 <div v-if="category == 'about-us'"> 
                     <AboutMM></AboutMM>
                 </div>
@@ -56,11 +56,14 @@ export default {
 
     .about {
         position: relative;
+    }
+
+    .about-body {
         padding: 30px 9%;
     }
     .about img {
         width: 100%;
-        height: 300px;
+        max-height: 300px;
         object-fit: cover;
         object-position: center;
         filter: brightness(.4);
@@ -69,9 +72,11 @@ export default {
         position: absolute;
         color: #fff;
         font-weight: bolder;
-        top: 30%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background: #3a76b1;
+        padding: 15px 25px;
     }
     .about-category {
         background: #e7e8ea;
@@ -104,5 +109,41 @@ export default {
         background: #003594;
     }
    
+    @media (max-width:990px) {
+        .about h2 {
+            position: absolute;
+            color: #fff;
+            font-weight: bolder;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            background: #3a76b1;
+            padding: 15px 25px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .about img {
+            width: 100%;
+            height: 250px;
+        }
+        .about h2 {
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            background: #3a76b1;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        .about-body {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .about-category {
+            margin-top: 15px;
+        }
+    }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="news-section container">
         <div class="row">
-            <div class="col-lg-5 col-md-5 h-100 p-3">
+            <div class="col-lg-5 col-md-12 h-100 p-3 mb-3 event-main">
                 <div class="title p-3">
                     <span>23-05-2023</span>
                     <h2>Sosialisasi Program Pengungkapan Sukarela (PPS)</h2>
@@ -12,7 +12,7 @@
                     Read More <i class="fa-solid fa-chevron-right"></i>
                 </router-link>
             </div>
-            <div class="col-lg-7 col-md-7 p-3">
+            <div class="col-lg-7 col-md-12 p-3 px-md-5 news-bar">
                 <div class="news-head p-3">
                     <h2 class="">LATEST NEWS</h2>
 
@@ -140,5 +140,99 @@
         position: absolute;
         bottom: 20px;
         left: 20px;
+    }
+
+    @media (max-width:990px) {
+        .title h2 {
+            font-size: 25px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        .event-main {
+            padding: 0 9% !important;
+            margin-bottom: 20px;
+        }
+        .news-head h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 !important;
+        }
+
+        .news-head {
+            padding: .7rem !important;
+        }
+        .news-card {
+            position: relative;
+            min-height: 250px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            transition: .5s ease;
+            margin-top: 10px;
+        }
+        .latest-news h5 {
+            color: #6ebf08;
+            font-size: 16px;
+        }
+        .latest-news h4 {
+            color: #00b5e2;
+            font-size: 18px;
+        }
+        .latest-news p {
+            overflow: hidden;
+            font-weight: 400 !important;
+            font-size: 13px;
+        }
+        .news-card .read-more {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .title h2 {
+            font-size: 18px;
+        }
+        .news-bar {
+            padding: 0 9% !important;
+            margin-top: 15px;
+        }
+        .news-head h2 {
+            font-size: 13px;
+        }
+
+        .news-head {
+            padding: .7rem !important;
+        }
+        .news-card {
+            position: relative;
+            min-height: 250px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            transition: .5s ease;
+            margin-bottom: 15px;
+            background: rgb(250, 245, 245);
+        }
+        .latest-news h5 {
+            color: #6ebf08;
+            font-size: 16px;
+        }
+        .latest-news h4 {
+            color: #00b5e2;
+            font-size: 18px;
+        }
+        .latest-news p {
+            overflow: hidden;
+            font-weight: 400 !important;
+            font-size: 13px;
+        }
+        .news-card .read-more {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
     }
 </style>

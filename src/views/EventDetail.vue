@@ -44,8 +44,23 @@
 </template>
 
 <script>
+import {  onMounted, onUpdated, ref } from 'vue'
     export default {
-        
+        setup() {
+            
+            onMounted(() => {
+                setTimeout(() => {
+                    window.scrollTo(0,0)
+                }, 100);
+            })
+            onUpdated(() => {
+                window.scrollTo(0,0)
+            })
+
+            let category = ref('del later this');
+
+            return {category}
+        }
     }
 </script>
 
@@ -79,5 +94,32 @@
     .detail-content p {
         font-size: 13px;
         color: #5d5d5e;
+    }
+
+    @media (max-width:450px) {
+        .detail-hero img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(.4);
+        }
+        .detail-hero h2 {
+            padding: 10px 30px;
+            font-size: 15px;
+        }
+        .detail-header {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .detail-content h3 {
+            color: #0045b6;
+            font-size: 18px;
+        }
+        .detail-content p {
+            font-size: 12px;
+            color: #5d5d5e;
+        }
+
     }
 </style>

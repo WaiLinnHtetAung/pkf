@@ -48,9 +48,7 @@
 </script>
 
 <style scoped>
-    .welcome h3 {
-        color: #0045b6;
-    }
+  
     .welcome p {
         text-align: justify;
         font-size: 13px;
@@ -86,5 +84,53 @@
         margin-top: 15px;
         color: #978173;
         font-size: 13px;
+    }
+
+    @media (max-width:990px) {
+        .welcome h3 {
+            color: #0045b6;
+            font-size: 18px;
+        }
+        .welcome p {
+            text-align: justify;
+            font-size: 12px;
+        }
+        .about-us a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            padding-top: 5px;
+        }
+    }
+    
+    @media (max-width:450px) {
+        .welcome {
+            padding: 0 9%;
+
+        }
+        .welcome h3 {
+            color: #0045b6;
+            font-size: 16px;
+        }
+        .category-link {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            margin-top: 40px;
+            gap: 1rem;
+            flex-wrap: wrap;
+          
+        }
+        .category-link a {
+            text-decoration: none;
+            text-align: center;
+        }
+        .category-link p {
+            margin-top: 15px;
+            color: #978173;
+            font-size: 13px;
+        }
+
+   
     }
 </style>

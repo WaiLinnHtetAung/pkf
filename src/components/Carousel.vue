@@ -76,4 +76,52 @@
         border: 0;
         border-radius: 12px;
     }
+
+    @media (max-width:990px) {
+        .carousel-caption {
+            margin-bottom: 25px;
+            margin-left: -20px;
+        }
+        .carousel-caption h3 {
+            color: #fff;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .carousel-caption p {
+            color: #fff;
+            font-size: 14px;
+        }
+        .carousel-caption button {
+            background: #fff;
+            color: blue;
+            padding: 3px 20px;
+            border: 0;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .carousel-caption {
+            margin-bottom: -15px;
+            margin-left: -20px;
+        }
+        .carousel-caption h3 {
+            color: #fff;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .carousel-caption p {
+            color: #fff;
+            font-size: 10px;
+        }
+        .carousel-caption button {
+            background: #fff;
+            color: blue;
+            padding: -2px 12px;
+            border: 0;
+            border-radius: 12px;
+            font-size: 9px;
+        }
+    }
 </style>

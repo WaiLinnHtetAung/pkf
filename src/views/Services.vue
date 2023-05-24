@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <section class="about">
         <img src="../assets/images/indo-carousel02.jpg" alt="">
         <h2 v-if="service == 'assurance'">AUDIT & ASSURANCE</h2>
         <h2 v-if="service == 'our-services'">OUR SERVICES</h2>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -100,8 +100,42 @@ export default {
         background: #104982;
         padding: 10px 50px;
     }
+
+    @media (max-width:990px) {
+        .about h2 {
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #104982;
+            padding: 10px 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
     
-   
+   @media (max-width:450px) {
+        .about img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(.4);
+        }
+        .about h2 {
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #104982;
+            padding: 10px 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .service-content {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-top: 0px;
+        }
+   }
 
 </style>
 

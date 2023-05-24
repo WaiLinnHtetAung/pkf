@@ -1,5 +1,5 @@
 <template>
-    <div class="events">
+    <section class="events">
         <img class="event-img" src="../assets/images/newspaper.jpg" alt="">
         <h2>NEWS & EVENTS</h2>
 
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -158,5 +158,66 @@ import { onMounted, onUpdated } from 'vue'
         font-size: 14px;
     }
 
-  
+    @media (max-width:990px) {
+        .events .event-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(.4);
+        }
+        .events h2 {
+            position: absolute;
+            color: #fff;
+            font-weight: bolder;
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #104982;
+            padding: 10px 40px;
+            font-size: 20px;
+        }
+        .event-card h4 {
+            color: #a2d7ea;
+            font-size: 20px;
+        }
+        .event-card p {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .events .event-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(.4);
+        }
+        .events h2 {
+            position: absolute;
+            color: #fff;
+            font-weight: bolder;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #104982;
+            padding: 10px 40px;
+            font-size: 14px;
+        }
+        .event-card h4 {
+            color: #a2d7ea;
+            font-size: 18px;
+        }
+        .event-card h5 {
+            font-size: 14px;
+        }
+        .event-card p {
+            font-size: 13px;
+        }
+        .events-header {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
 </style>

@@ -97,4 +97,44 @@
         color: #fff;
         font-size: 13px;
     }
+
+    @media (max-width:990px) {
+        .event-item h4 {
+            font-size: 1rem;
+        }
+        .event-item h4 a {
+            color: #fff;
+            font-size: 16px;
+        }
+        .event-item .event-view {
+            position: absolute;
+            bottom: .2rem;
+            left: .2rem;
+            color: #fff;
+            background: #6ebf08;
+            font-size: 12px;
+            padding: 3px 15px 0;
+            border-radius: 5px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .event-item h4 {
+            font-size: 1.3rem;
+        }
+        .event-item h4 a {
+            color: #fff;
+            font-size: 19px;
+        }
+        .event-item .event-view {
+            position: absolute;
+            bottom: .5rem;
+            left: .5rem;
+            color: #fff;
+            background: #6ebf08;
+            font-size: 16px;
+            padding: 3px 15px 0;
+            border-radius: 5px;
+        }
+    }
 </style>

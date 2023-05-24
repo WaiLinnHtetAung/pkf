@@ -8,6 +8,10 @@
     color: #000;
 }
 
+section {
+    overflow-x: hidden;
+}
+
 .show-link, .show-link a {
     font-size: 12px;
     color: #184183;
@@ -25,4 +29,10 @@
     padding: 2px 9px;
     color: #fff;
     border-radius: 5px;
+}
+
+@media(max-width:450px) {
+    .contact-btn {
+        font-size: 11px;
+    }
 }
