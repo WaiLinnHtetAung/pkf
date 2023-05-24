@@ -17,26 +17,26 @@
             <a href="#">About us </a><i class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="category-link">
-            <a href="">
+            <router-link to="/services/assurance">
                 <img src="../assets/images/assurance1.png" alt="">
                 <p>Audit & Assurance</p>
-            </a>
-            <a href="">
+            </router-link>
+            <router-link to="/services/advisory">
                 <img src="../assets/images/advisory1.png" alt="">
                 <p>Advisory</p>
-            </a>
-            <a href="">
+            </router-link>
+            <router-link to="/services/tax">
                 <img src="../assets/images/tax-legal1.png" alt="">
                 <p class="ms-4">Tax</p>
-            </a>
-            <a href="">
+            </router-link>
+            <router-link to="/services/business-solutions">
                 <img src="../assets/images/business-solutions1.png" alt="">
                 <p>Business Solutions</p>
-            </a>
-            <a href="">
+            </router-link>
+            <router-link to="/services/technological&risk-services">
                 <img src="../assets/images/risk-advisory1.png" alt="">
                 <p>Technology & Risk Services</p>
-            </a> 
+            </router-link> 
         </div>
     </div>
 </template>

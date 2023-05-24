@@ -6,10 +6,11 @@
                     <span>23-05-2023</span>
                     <h2>Sosialisasi Program Pengungkapan Sukarela (PPS)</h2>
                 </div>
-                <a href="">
-                    <img src="../assets/images/news.jpg" alt="">
-                </a>
-                <a href="" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                
+                <img src="../assets/images/news.jpg" alt="">
+                <router-link to="/news-events/event1" class="read-more">
+                    Read More <i class="fa-solid fa-chevron-right"></i>
+                </router-link>
             </div>
             <div class="col-lg-7 col-md-7 p-3">
                 <div class="news-head p-3">
@@ -25,7 +26,7 @@
                             <h5>23-05-2023</h5>
                             <h4>PKF CAP honoured as employer of choice</h4>
                             <p>We take great pleasure in reporting that PKF CAP has been recognised under renowned employer accreditation schemes.</p>
-                            <a href="" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                            <router-link to="/news-events/event1" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></router-link>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -33,7 +34,7 @@
                             <h5>23-05-2023</h5>
                             <h4>PKF-CAP LLP featured in Good Company Report 2021/22</h4>
                             <p>We are delighted to report that PKF-CAP LLP has been featured in Enterprise Singapore’s Good Company Report 2021/22</p>
-                            <a href="" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                            <router-link to="/news-events/event1" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></router-link>
                         </div>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
     .title h2 {
         font-size: 25px;
     }
-    a img {
+    img {
         width: 100%;
         height: auto;
         vertical-align: middle;

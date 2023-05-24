@@ -30,6 +30,11 @@ const routes = [
     props: true,
   },
   {
+    path: '/news-events/:event',
+    name: 'EventDetail',
+    component: () => import('../views/EventDetail.vue')
+  },
+  {
     path: '/contact-us',
     name: 'ContactUs',
     component: () => import('../views/ContactUs.vue')

@@ -10,7 +10,7 @@
        </div>
     </header>
 
-    <div id="LogoBox" class="container d-flex justify-content-between align-items-center px-3">
+    <div id="LogoBox" class="container d-flex justify-content-between align-items-center px-3 logo-box">
         <a href="/" id="Logo" title="PKF Hadiwinata" ><img src="../assets/images/logo.png" alt=""></a>
         
         <p class="fs-3 text-secondary fw-bold">PKF MYANMAR</p>
@@ -30,11 +30,11 @@
                     </li>
 
                     <li class="nav-item service-menu">
-                        <router-link to="/services/our-services" class="nav-link nav2-info-container" :class="{'active-menu': currentRoute.substring(0,8) == '/service'}">SERVICES <i class="ms-2 fa-solid fa-caret-down text-primary" :class="{'text-white': currentRoute.substring(0,8) == '/service'}"></i></router-link>
-                        <div class="dropdown">
+                        <router-link @click="isShow = !isShow" to="/services/our-services" class="nav-link nav2-info-container" :class="{'active-menu': currentRoute.substring(0,8) == '/service'}">SERVICES <i class="ms-2 fa-solid fa-caret-down text-primary" :class="{'text-white': currentRoute.substring(0,8) == '/service'}"></i></router-link>
+                        <div class="dropdown" v-if="isShow">
                             <div class="container pt-3">
                                     <div class="row w-100 ">
-                                        <div class="col-md-3 col-sm-12 mb-4">
+                                        <div class="col-md-12 col-lg-3 col-sm-12 mb-4">
                                             <div class="row">
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0 ">
                                                     <img src="../assets/images/assurance.png" alt=" Audit &amp; Assurance">    </div>
@@ -43,7 +43,7 @@
                                                 </div>
                                             </div>
                                         </div>             
-                                        <div class="col-md-3 col-sm-12 mb-4">
+                                        <div class="col-md-12 col-lg-3 col-sm-12 mb-4">
                                             <div class="row">
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/advisory.png" alt=" Advisory">    </div>
@@ -52,7 +52,7 @@
                                                 </div>
                                             </div>
                                         </div>             
-                                        <div class="col-md-3 col-sm-12 mb-4">
+                                        <div class="col-md-12 col-lg-3 col-sm-12 mb-4">
                                             <div class="row">
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/tax-legal.png" alt="Tax">    </div>
@@ -61,7 +61,7 @@
                                                 </div>
                                             </div>
                                         </div>             
-                                        <div class="col-md-3 col-sm-12 mb-4">
+                                        <div class="col-md-12 col-lg-3 col-sm-12 mb-4">
                                             <div class="row">
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                     <img src="../assets/images/business-solutions.png" alt="Business Solutions">    </div>
@@ -70,7 +70,7 @@
                                                 </div>
                                             </div>
                                         </div>             
-                                        <div class="col-md-3 col-sm-12 mb-4 mt-3">
+                                        <div class="col-md-12 col-lg-3 col-sm-12 mb-4 mt-3">
                                             <div class="row">
                                                 <div class="d-none d-lg-block col-md-2 col-lg-4 pl-0 pr-0">
                                                         <img src="../assets/images/risk-advisory.png" alt="Technology &amp; Risk Services">    </div>
@@ -85,7 +85,7 @@
                     </li>
 
                     <li class="nav-item" >
-                        <router-link to="/news-events" class="nav-link" :class="{'active-menu': currentRoute == '/news-events'}">NEWS & EVENTS</router-link>
+                        <router-link to="/news-events" class="nav-link" :class="{'active-menu': currentRoute.substring(0,12) == '/news-events'}">NEWS & EVENTS</router-link>
                     </li>
                     <li class="nav-item" >
                         <router-link to="/careers/careers" class="nav-link" :class="{'active-menu': currentRoute.substring(0,8) == '/careers'}">CAREERS</router-link>
@@ -106,7 +106,7 @@ import { onMounted, ref } from 'vue'
         props:['currentRoute'],
         setup() {
             let isSticky = ref(false);
-            let isService = ref(false);
+            let isShow = ref(true);
 
             let handleScroll = () => {
                 isSticky.value = window.pageYOffset;
@@ -115,10 +115,13 @@ import { onMounted, ref } from 'vue'
 
             onMounted(() => {
                 window.addEventListener('scroll', handleScroll);
+                if(window.innerWidth < 990) {
+                    isShow.value = false;
+                }
             })
 
 
-            return {isSticky}
+            return {isSticky, isShow}
         }
     }
 </script>
@@ -145,9 +148,10 @@ import { onMounted, ref } from 'vue'
     .social-media {
         display: flex;
         gap: .5rem;
+        align-items: center;
     }
     .social-media i {
-        font-size: 25px;
+        font-size: 20px;
         color: #fff;
     }
 
@@ -231,5 +235,23 @@ import { onMounted, ref } from 'vue'
     }
 
     /* --- main navbar end---  */
+
+    @media (max-width:990px) {
+        .logo-box {
+            display: none !important;
+        }
+        .dropdown {
+            position: static;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transform: translateY(10px);
+            opacity: 1;
+            visibility: visible;
+            transition: 0.5s;
+            background-color: #e7e8ea;
+            display: flex;
+        }
+    }
    
 </style>
