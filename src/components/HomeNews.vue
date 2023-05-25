@@ -196,6 +196,15 @@
         .title h2 {
             font-size: 18px;
         }
+        .event-main .read-more {
+            background: #6ebf08;
+            color: #fff;
+            font-size: 12px;
+            padding: 5px 25px ;
+            display: inline-block;
+            margin-left: 10px;
+     
+        }
         .news-bar {
             padding: 0 9% !important;
             margin-top: 15px;

@@ -103,13 +103,13 @@
 
     @media (max-width: 450px) {
         .carousel-caption {
-            margin-bottom: -15px;
+            margin-bottom: -19px;
             margin-left: -20px;
         }
         .carousel-caption h3 {
             color: #fff;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11px;
         }
         .carousel-caption p {
             color: #fff;
@@ -123,5 +123,6 @@
             border-radius: 12px;
             font-size: 9px;
         }
+    
     }
 </style>

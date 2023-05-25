@@ -10,7 +10,7 @@
 
         <div class="row mt-5 service-content">
             <ServicesCategory :service="service"></ServicesCategory>
-            <div class="col-lg-9 col-md-8 ps-3">
+            <div class="col-lg-9 col-md-8">
                 <div v-if="service == 'our-services'">
                     <OurServices></OurServices>
                 </div>

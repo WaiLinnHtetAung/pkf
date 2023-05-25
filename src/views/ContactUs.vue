@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row mt-5 form">
-            <div class="col-lg-6">
+            <div class="col-lg-6 ps-0">
                 <form action="">
                     <div class="form-group mb-2">
                         <label for="">Full Name <span>*</span></label>
@@ -57,7 +57,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-6 text-center map ">
+            <div class="col-lg-6 text-center map ps-0">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21805.962517665175!2d96.14998484085122!3d16.814390059575214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ecbe9bf93d69%3A0xc3f3f04845cf0bd!2sChatrium%20Hotel%20Royal%20Lake%20Yangon!5e0!3m2!1sen!2smm!4v1684902135208!5m2!1sen!2smm" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -172,7 +172,7 @@
         }
         .form {
             margin: 0 auto !important;
-            padding: 10px 9%;
+            padding: 10px 8%;
             width: auto !important;
         }
 

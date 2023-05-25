@@ -10,7 +10,7 @@
                 </div>
                 
             </div>
-            <div class="col-lg-9 col-md-8 ps-3">
+            <div class="col-lg-9 col-md-8">
                 <a href="" class="float-end contact-btn me-4">Contact Us</a>
                 <p class="show-link">
                     <router-link to="/">Home</router-link>&nbsp;/&nbsp;

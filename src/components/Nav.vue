@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="nav-item service-menu">
-                        <router-link @click="isShow = !isShow" to="/services/our-services" class="nav-link nav2-info-container" :class="{'active-menu': currentRoute.substring(0,8) == '/service'}">SERVICES <i class="ms-2 fa-solid fa-caret-down text-primary" :class="{'text-white': currentRoute.substring(0,8) == '/service'}"></i></router-link>
+                        <router-link to="/services/our-services" @mouseenter="showSubMenu" @click="toggleSubMenu" class="nav-link services nav2-info-container" :class="{'active-menu': currentRoute.substring(0,8) == '/service'}">SERVICES <i class="ms-2 fa-solid fa-caret-down text-primary" :class="{'text-white': currentRoute.substring(0,8) == '/service'}"></i></router-link>
                         <div class="dropdown" v-if="isShow">
                             <div class="container pt-3">
                                     <div class="row w-100 ">
@@ -106,22 +106,30 @@ import { onMounted, ref } from 'vue'
         props:['currentRoute'],
         setup() {
             let isSticky = ref(false);
-            let isShow = ref(true);
+            let isShow = ref(false);
+            
+            let showSubMenu = () => {
+                if(window.innerWidth > 990) {
+                    isShow.value = true;
+                }
+            }
+
+            let toggleSubMenu = () => {
+                if(window.innerWidth < 990) {
+                    isShow.value = !isShow.value;
+                }
+            }
 
             let handleScroll = () => {
                 isSticky.value = window.pageYOffset;
             }
 
-
             onMounted(() => {
                 window.addEventListener('scroll', handleScroll);
-                if(window.innerWidth < 990) {
-                    isShow.value = false;
-                }
             })
 
 
-            return {isSticky, isShow}
+            return {isSticky, isShow, showSubMenu, toggleSubMenu}
         }
     }
 </script>
@@ -248,9 +256,9 @@ import { onMounted, ref } from 'vue'
             transform: translateY(10px);
             opacity: 1;
             visibility: visible;
+            display: block;
             transition: 0.5s;
             background-color: #e7e8ea;
-            display: flex;
             margin-bottom: 10px;
             padding: 0 0 10px;
         }

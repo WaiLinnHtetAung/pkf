@@ -12,7 +12,7 @@
                     <a :class="{'text-white' : category == 'two'}">Two</a>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-9 ps-3">
+            <div class="col-lg-9 col-md-9">
                 <div v-if="category == 'about-us'"> 
                     <AboutMM></AboutMM>
                 </div>
@@ -56,6 +56,7 @@ export default {
 
     .about {
         position: relative;
+        overflow-x: hidden;
     }
 
     .about-body {

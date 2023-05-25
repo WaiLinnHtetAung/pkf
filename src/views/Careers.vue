@@ -21,7 +21,7 @@
             <div class="row mt-5 career-content">
                 <CareerCategory :career = 'career'></CareerCategory>
 
-                <div class="col-lg-9 col-md-8 ps-3">
+                <div class="col-lg-9 col-md-8">
                     <div v-if="career == 'careers'">
                         <CareerPage></CareerPage>
                     </div>
@@ -223,10 +223,10 @@ export default {
         }
         .career-form {
             top: 13%;
-            left: 45%;
+            left: 43%;
             transform: translate(-50%, -50%);
-            padding: .5rem 2rem 1rem;
-            min-width: 350px;
+            padding: .5rem 1rem 1rem;
+            min-width: 300px;
         }
         .career-form a {
             color: #00b5e2;
