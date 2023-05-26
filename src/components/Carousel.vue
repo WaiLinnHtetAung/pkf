@@ -82,6 +82,9 @@
             margin-bottom: 25px;
             margin-left: -20px;
         }
+        .carousel-item img {
+            height: 320px;;
+        }
         .carousel-caption h3 {
             color: #fff;
             font-weight: bold;
@@ -102,18 +105,21 @@
     }
 
     @media (max-width: 450px) {
+        .carousel-item img {
+            height: 250px;;
+        }
         .carousel-caption {
-            margin-bottom: -19px;
-            margin-left: -20px;
+            margin-bottom: 30px;
+            margin-left: 0px;
         }
         .carousel-caption h3 {
             color: #fff;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 14px;
         }
         .carousel-caption p {
             color: #fff;
-            font-size: 10px;
+            font-size: 12px;
         }
         .carousel-caption button {
             background: #fff;
