@@ -12,8 +12,7 @@
       a private accounting firm since 2013. Our company represents our
       commitment to providing our clients with a consistent experience and for
       each member to be an Independent ethical professional accountant, improve
-      client satisfaction and confidence, and for us to grow together. PKF
-      Myanmar
+      client satisfaction and confidence, and for us to grow together.
     </p>
     <p style="text-indent: 50px">
       We are located in Yangon, the former capital and economic center of

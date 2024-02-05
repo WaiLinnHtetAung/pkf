@@ -51,7 +51,7 @@
               to="/about-us"
               class="nav-link"
               :class="{ 'active-menu': currentRoute == '/about-us' }"
-              >ABOUT</router-link
+              >ABOUT US</router-link
             >
           </li>
 

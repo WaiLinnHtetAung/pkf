@@ -1,7 +1,8 @@
 <template>
   <div class="about">
     <img src="../assets/images/indo-carousel01.jpg" alt="" />
-    <h2>ABOUT PKF MYANMAR</h2>
+    <h2 v-if="category == 'pkf'">ABOUT PKF MYANMAR</h2>
+    <h2 v-if="category == 'thida'">ABOUT THIDA & PARTNERS</h2>
 
     <div class="row mt-5 about-body">
       <div class="col-lg-3 col-md-3 about-category">
@@ -21,9 +22,6 @@
         </div>
       </div>
       <div class="col-lg-9 col-md-9">
-        <div v-if="category == 'about-us'">
-          <AboutMM></AboutMM>
-        </div>
         <div v-if="category == 'pkf'">
           <PKF @about="category = 'about-us'"></PKF>
         </div>
@@ -38,16 +36,14 @@
 <script>
 import ThidaPartner from "../components/ThidaPartner";
 import PKF from "../components/PKF";
-import AboutMM from "../components/AboutMM";
 import { onMounted, onUpdated, ref } from "vue";
 export default {
   components: {
     ThidaPartner,
     PKF,
-    AboutMM,
   },
   setup() {
-    let category = ref("about-us");
+    let category = ref("pkf");
 
     onUpdated(() => {
       window.scrollTo(0, 0);

@@ -44,7 +44,6 @@ import Advisory from "../components/Advisory";
 import OurServices from "../components/OurServices";
 import Assurance from "../components/Assurance";
 import ServicesCategory from "../components/ServicesCategory";
-import AboutMM from "../components/AboutMM";
 import { onMounted, onUpdated, ref } from "vue";
 export default {
   components: {
@@ -55,7 +54,6 @@ export default {
     OurServices,
     Assurance,
     ServicesCategory,
-    AboutMM,
   },
   props: ["service"],
   setup() {
